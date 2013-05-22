@@ -1,0 +1,14 @@
+--- server.c	2013-02-04 08:22:26.000000000 +0000
++++ server2.c	2013-02-04 08:23:09.000000000 +0000
+@@ -73,11 +73,6 @@
+ 			char bufftmp[strlen(buffer)-2];
+ 			strncpy(bufftmp,buffer,strlen(buffer)-2);
+ 			
+-			if((strcmp(bufftmp,"quit")==0)){	
+-				printf("client closes socket\n\n");
+-				fflush(stdout);
+-				close(new_sockfd);
+-			}
+ 			recv_length=recv(new_sockfd, &buffer, 1024, 0);
+ 		}
+ 		/* close the client connection */
