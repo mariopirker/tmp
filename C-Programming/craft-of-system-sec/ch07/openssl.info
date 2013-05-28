@@ -1,0 +1,6 @@
+The library of openssl is at:
+/usr/include/openssl/
+
+Compiling a source file needs to be done with:
+gcc des.c -o des.o -lssl
+	--> -lssl is important!
